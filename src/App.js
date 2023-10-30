@@ -10,23 +10,26 @@ const App = () => {
   },[data])
   return (
     <div className="App">
-      <section className="Navbar">
-        <nav className="nav">
-          <div><i class="fa-solid fa-camera"><br /><center>PIXABY</center></i></div>
-          <div>exolore</div>
-          <div><i class="fa-solid fa-bell"></i></div>
-          <button>👆Upload</button>
-        </nav>
-        </section>
-
-
-        <section className="Hea">
-        <header className="Header">
-        <h1>Stunning royalty-free images & royalty-free stock</h1>
-        <h3>over 4.1 milion+ high quality stock, videos and music sheared by our talented community. </h3>
-        <center><input type="text" placeholder="Search Image here What do you want" onChange={(e)=>setSearch(e.target.value)} /></center>
-        </header>
-        </section>
+      <main>
+       <section className='Navbar'>
+         <nav className="navbar">
+          <div><ruby>PIXABAY<rt><i class="fa-solid fa-camera"></i></rt></ruby></div>
+           <ul className='navlist'>
+             <li><div><a href="">explore</a></div></li>
+             <li><div><i class="fa-solid fa-bell"></i></div></li>
+             <li><div><button id='btn1'>Log in</button></div></li>
+             <li><div><button id='btn1'>Join</button></div></li>
+             <li><div><button id='btn2'><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload</button></div></li>
+            </ul>
+       </nav>
+       </section>
+       <section className='Header'>
+       <center><h1>Stunning royalty-free images & royalty-free stock</h1></center>
+       <center><h3>Over 4.1 million hign quality images,videos and music shared by talented community.</h3></center>
+       <center><input type="text" placeholder='Search Image here What do you want' onChange={(e)=>{setSearch(e.target.value)}}/></center>
+       </section>
+       </main>
+      
 
         
       {data.map((x)=>{
